@@ -1,0 +1,14 @@
+﻿  plusWithBinary.c
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(5): warning C4013: “testadd”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(6): warning C4013: “testsubs”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(7): warning C4013: “testchen”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(8): warning C4013: “testchu”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(14): warning C4013: “add”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(22): warning C4013: “subs”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(31): warning C4013: “chen”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(39): warning C4013: “chu”未定义；假设外部返回 int
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(18): warning C4716: “testadd”: 必须返回一个值
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(27): warning C4716: “testsubs”: 必须返回一个值
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(35): warning C4716: “testchen”: 必须返回一个值
+f:\lintcode\lintcode\pluswithbinary\pluswithbinary.c(47): warning C4716: “testchu”: 必须返回一个值
+  plusWithBinary.vcxproj -> F:\lintcode\lintcode\plusWithBinary\plusWithBinary\Debug\plusWithBinary.exe
