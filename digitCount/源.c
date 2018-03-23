@@ -33,23 +33,36 @@ int digitCounts(int k, int n) {
 	if (k > 9 || k < 0) { return -1; }
 	int ret = 0;
 	int base = 1;
+	int level = 1;
 	if (k == 0 && n == 0) { ret = 1; }
+	
 	while (n / base) {
-		if (n == k) { ret++; }
+		if (n == k) { ret++; return ret; }
 		int cur =0, low = 0,  high = 0;
+		int cbase = 0;
 		cur = (n / base) % 10;
 		high = n / (base * 10);
 		low = n % base;
+
+		if (base > 1) {
+			cbase = pow(11, level - 1);
+		}
 		if (cur == k) {
-			ret += (high * (base)) + low;
+			ret += (high * (cbase)) + low+1;
 		}
 		else if (cur > k) {
-			ret += (high + 1) * (base);
+			ret += (high + 1) * (cbase);
 		}
 		else if (cur < k) {
-			ret += high * (base);
+			ret += high * (cbase);
 		}
 		base *= 10;
+
+		if (base > 1) {			
+			int other = pow(10, level-2);
+			ret += other;
+		}
+		level++;
 	}
 	return ret;
 }
