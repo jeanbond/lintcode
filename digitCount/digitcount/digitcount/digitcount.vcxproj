@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E6E9F3CC-FA83-4638-A9AF-6E82D498068A}</ProjectGuid>
-    <RootNamespace>calcSerialNumContent</RootNamespace>
+    <ProjectGuid>{08DC4088-E1A7-42B2-A42F-CE816638247D}</ProjectGuid>
+    <RootNamespace>digitcount</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,7 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="源.c" />
+    <ClCompile Include="..\..\源.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
