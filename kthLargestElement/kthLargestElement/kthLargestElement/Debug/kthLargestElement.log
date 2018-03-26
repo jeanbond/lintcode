@@ -1,2 +1,4 @@
 ﻿  code.cpp
-  KthLargestElement.vcxproj -> F:\lintcode\lintcode\KthLargestElement\KthLargestElement\Debug\KthLargestElement.exe
+e:\lintcode\kthlargestelement\code.cpp(11): warning C4018: “>”: 有符号/无符号不匹配
+e:\lintcode\kthlargestelement\code.cpp(48): warning C4715: “Solution::QSort”: 不是所有的控件路径都返回值
+  KthLargestElement.vcxproj -> E:\lintcode\KthLargestElement\KthLargestElement\Debug\KthLargestElement.exe

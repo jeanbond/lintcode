@@ -8,17 +8,21 @@ public:
 
 	int kthLargestElement(int n, vector<int> &nums) {
 		// write your code here
+		if (n > nums.size()) {
+			cout << "Input order[" << n << "] is over the list size[" << nums.size() << "] !!!" << endl;
+			return -1;
+		}
 		return findN(n, nums);
 	}
 
 	int findN(int order, vector<int> &src) {
-		
-	}
-	
+		int loc = QSort(src, 0, src.size() - 1, order);
+		return src[loc];
+	}	
 
 	int partition(vector<int> &src, int start, int end) {
 		int tmp = src[start];
-
+		if (start >= end)return start;
 		while (start < end) {
 			while (start < end && src[end] >= tmp) end--;
 			swap(src[start], src[end]);
@@ -28,13 +32,19 @@ public:
 
 		return start;
 	}
-	int QSort(vector<int> &src, int start, int end) {
-		if (start >= end) { return 0; }
+	int QSort(vector<int> &src, int start, int end, int order) {
+		if (start >= end) { return start; }
 
 		int mid = partition(src, start, end);
-		QSort(src, start, mid - 1);
-		QSort(src, mid + 1, end);
-		return 0;
+		// if we find the location,as we partitioned the order
+		int dis = end - mid+1;
+		if (dis == order) return mid;
+		if (order > dis) {
+			return QSort(src, start, mid - 1, order-dis);
+		}
+		else if (order < dis) {
+			return QSort(src, mid + 1, end, order);
+		}
 	}
 
 	void swap(int &a, int &b) {
@@ -46,9 +56,17 @@ public:
 
 int main()
 {
-	vector<int> src = {3,6,5,1,2,45,8,99,66,25,63,55,44,88,77,15,65,45,89,25,15,5465,546,215,125};
+	vector<int> src = { 
+		44,3,4,6,3,22,55,66,77,343
+	};
+	int order = 5;
 	Solution s = Solution();
-	s.QSort(src, 0, src.size() - 1);
-	for (vector<int>::iterator s = src.begin(); s != src.end(); s++)  cout << *s << " ";
+	for (int i = 1; i < 22; i++) {
+		order = i;
+		cout << "The order is: " << order << endl << "The element is: "
+			<< s.kthLargestElement(order, src) << endl;
+		for (vector<int>::iterator s = src.begin(); s != src.end(); s++)  cout << *s << " ";
+		cout << endl;
+	}
 	return 0;
 }
