@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{5DC68CAC-A538-4F8C-A92C-0B5564D0A728}</ProjectGuid>
-    <RootNamespace>mergeTwoSortedArrays</RootNamespace>
+    <ProjectGuid>{DB37C82C-BAE2-41C4-8A63-F1A30E0491AE}</ProjectGuid>
+    <RootNamespace>MergeTwoSortedArrays</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

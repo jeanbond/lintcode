@@ -1,4 +1,0 @@
-﻿  calc.c
-f:\lintcode\lintcode\计算阶层中0的个数\calc.c(5): warning C4013: “calcsss”未定义；假设外部返回 int
-f:\lintcode\lintcode\计算阶层中0的个数\calc.c(10): warning C4142: "calcsss": 类型的良性重定义
-  calc.vcxproj -> F:\lintcode\lintcode\计算阶层中0的个数\calc\Debug\calc.exe

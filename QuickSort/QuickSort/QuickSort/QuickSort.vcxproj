@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{10BFB214-8A7C-4467-A4A4-1C94007BFB2F}</ProjectGuid>
+    <ProjectGuid>{D3C43263-DC09-4A9B-8072-778EB8000CC3}</ProjectGuid>
     <RootNamespace>QuickSort</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

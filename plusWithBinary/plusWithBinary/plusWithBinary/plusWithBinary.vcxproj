@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{24D3F9F2-D264-4B68-BAE2-749DC547ABB4}</ProjectGuid>
-    <RootNamespace>plusWithBinary</RootNamespace>
+    <ProjectGuid>{6E97A93E-E8EC-4F89-859A-2EBEB331285A}</ProjectGuid>
+    <RootNamespace>PlusWithBinary</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

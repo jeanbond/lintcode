@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{DCEFD2D8-AB99-4D29-9833-5A0B60A478CE}</ProjectGuid>
-    <RootNamespace>kthLargestElement</RootNamespace>
+    <ProjectGuid>{5AFAEEE0-037E-4D8E-B7FD-27B657FC4089}</ProjectGuid>
+    <RootNamespace>KthLargestElement</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

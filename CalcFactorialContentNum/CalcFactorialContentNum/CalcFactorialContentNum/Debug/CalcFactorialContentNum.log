@@ -1,0 +1,4 @@
+﻿  calc.c
+f:\lintcode\lintcode\calcfactorialcontentnum\calc.c(5): warning C4013: “calcsss”未定义；假设外部返回 int
+f:\lintcode\lintcode\calcfactorialcontentnum\calc.c(10): warning C4142: "calcsss": 类型的良性重定义
+  CalcFactorialContentNum.vcxproj -> F:\lintcode\lintcode\CalcFactorialContentNum\CalcFactorialContentNum\Debug\CalcFactorialContentNum.exe

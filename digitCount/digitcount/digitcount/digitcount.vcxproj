@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{08DC4088-E1A7-42B2-A42F-CE816638247D}</ProjectGuid>
-    <RootNamespace>digitcount</RootNamespace>
+    <ProjectGuid>{ED3D74E8-714F-4A5A-A827-28EA0FCFBE69}</ProjectGuid>
+    <RootNamespace>DigitCount</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
