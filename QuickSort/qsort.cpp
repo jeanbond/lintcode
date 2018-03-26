@@ -22,11 +22,10 @@ template<typename T>
 U32 QSort<T>::quickSort(T *src, U32 start, U32 end) {
 	if (start >= end) { return OK; }
 
-	while (start < end) {
-		U32 loc = this->partition(src, start, end);
-		if (loc > 0)	quickSort(src, start, loc - 1);
-		if (end > 0)	quickSort(src, loc + 1, end);
-	}
+	U32 loc = this->partition(src, start, end);
+	if (loc > 0)	quickSort(src, start, loc - 1);
+	if (end > 0)	quickSort(src, loc + 1, end);
+
 	return OK;
 }
 
