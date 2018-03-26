@@ -4,45 +4,87 @@ using namespace std;
 #include<stdio.h>
 #include<vector>
 
+/*
+����:��Щ����������ֻ��3,5,7�������һ���㷨���ҳ����е�k������
+��������k������ָ��kС������?�����ĿӦ���ǽ�ָoffer����֮���еĳ�����
+�����Ĺؼ���Ѱ����һ��������
+��һ������ = ��֮ǰ���ɵĳ���������Ѱ��һ���� * (3��5��7)�������ڵ�ǰ��������Сֵ
+�赱ǰ����ΪM
+���һ������3����M����ΪM3��ͬ��M5,M7,��M = min(M3, M5 , M7)
+���ڳ���3���ԣ��ض�����T3ʹ��T3֮ǰ��������3��С��M,T3֮��ĳ���
+�ؼ���Ѱ�ҳ��������е�һ������3���ڵ�ǰ����������T3,Ѱ�ҳ��������е�һ������5��������������T5,ͬ��T7
+ʹ�ã�
+�赱ǰ����ΪM
+3*T3=M3 > M  ����ʽ(1)��
+5*T5=M5 > M  ����ʽ(2)��
+7*T7=M7 > M  ����ʽ(3)��
+�������µ�M = min(M3 , M5 , M7)��������T3,T5,T7��ʹ���µ�T3,��3*T3 > M��ͬ��T5,T7    ������1��
+��������£�������������ǣ���������ѭ��
+����տ�ʼM=1,��ʼT3=T5=T7=1,��������������M=3,��ʱ3*T3 <= M,��T3=1û�е���3,ͬ�����T5=1,T7=1,��M=7,
+֮��ͷ���T3,T5,T7��û��һ���ܷ���������ʽ(1),(2),(3)����Mһֱ���7���ٱ仯��
+Ϊ�˷�ֹ���������Ҫ������������1�Ĵ���Ϊ�ľ����ܹ���Ϊ��һ������M�ĺ�ѡֵ�ܹ�һֱ���
+����:
+7(k)
+���:
+25
+
+�ؼ���
+1 ��һ������ = ��֮ǰ���ɵĳ���������Ѱ��һ���� * (3��5��7)�������ڵ�ǰ��������Сֵ
+�赱ǰ����ΪM
+3*T3=M3 > M  ����ʽ(1)��
+5*T5=M5 > M  ����ʽ(2)��
+7*T7=M7 > M  ����ʽ(3)��
+�������µ�M = min(M3 , M5 , M7)��������T3,T5,T7��ʹ���µ�T3,��3*T3 > M��ͬ��T5,T7    ������1��
+��������£�������������ǣ���������ѭ��
+����տ�ʼM=1,��ʼT3=T5=T7=1,��������������M=3,��ʱ3*T3 <= M,��T3=1û�е���3,ͬ�����T5=1,T7=1,��M=7,
+֮��ͷ���T3,T5,T7��û��һ���ܷ���������ʽ(1),(2),(3)����Mһֱ���7���ٱ仯��
+Ϊ�˷�ֹ���������Ҫ������������1�Ĵ���Ϊ�ľ����ܹ���Ϊ��һ������M�ĺ�ѡֵ�ܹ�һֱ���
+*/
+
 class Solution {
 public:
-	/**
-	* @param n: An integer
-	* @return: the nth prime number as description.
-	*/
-	//to store all ugly number
-	vector<int> allUglyNum = { 1 };
-	//which base number to calc
-	vector<int> baseUg = {2,3,5};
-
+	int *ug = NULL;
+	
 	int nthUglyNumber(int n) {
-		// write your code here
-		while (true) {
-			if (allUglyNum.size() >= n) { return allUglyNum[n]; }
+		//���鶯̬�����ʱ��ע�⣺1��ʹ�� new �ؼ��֣� 2������ʹ�� [] ������ʹ�� ����
+		ug = new int[n + 1];
+		*ug = 1;
+		int *p2 = ug;
+		int *p3 = ug;
+		int *p5 = ug;
+		int cnt = 0;
 
-			for (int i = 0; i < allUglyNum.size(); i++) {
-				for (int j = 0; j < baseUg.size(); j++) {
-					if (!isExsit(allUglyNum, baseUg[j] * allUglyNum[i])) {
-						allUglyNum.push_back(baseUg[j] * allUglyNum[i]);
-						if (allUglyNum.size() >= n) { return allUglyNum[n]; }
-					}
-				}
-
-			}
+		while (cnt < n) {
+			int mixx = min(*p2 * 2, *p3 * 3, *p5 * 5);
+			cnt++;
+			ug[cnt] = mixx;
+			/* key area start */
+			while (*p2 * 2 <= mixx) p2++;
+			while (*p3 * 3 <= mixx) p3++;
+			while (*p5 * 5 <= mixx) p5++;
+			/* key area end */
 		}
+		int ret = ug[n-1];
+		// �ͷŶ�̬����Ķ��ڴ��ʱ��ע�⣺
+		//1��ʹ�ùؼ��� new ��
+		//2��������ͷ�����Ķѿռ������[]�������ã�����
+		delete[] ug;
+		return ret;
 	}
 
-	bool isExsit(vector<int> set, int ss) {
-		for (vector<int>::iterator i = set.begin();
-			i != set.end(); i++) {
-			if (*i == ss) { return true; }
-		}
-		return false;
+private:
+	int min(int a, int b, int c)
+	{
+		int minNum = a < b ? a : b;
+		minNum = minNum < c ? minNum : c;
+		return minNum;
 	}
 };
 
+
 int main() {
 	Solution s = Solution();
-	s.nthUglyNumber(9);
+	cout<<hex<<s.nthUglyNumber(9);
 	return 0;
 }
+  
