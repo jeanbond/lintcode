@@ -2,18 +2,19 @@ using namespace std;
 #include<vector>
 #include<iostream>
 
+
 class Solution {
 public:
 
 	int kthLargestElement(int n, vector<int> &nums) {
 		// write your code here
+		return findN(n, nums);
 	}
 
-	void swap(int &a, int &b) {
-		int tmp = a;
-		a = b;
-		b = tmp;
+	int findN(int order, vector<int> &src) {
+		
 	}
+	
 
 	int partition(vector<int> &src, int start, int end) {
 		int tmp = src[start];
@@ -34,6 +35,12 @@ public:
 		QSort(src, start, mid - 1);
 		QSort(src, mid + 1, end);
 		return 0;
+	}
+
+	void swap(int &a, int &b) {
+		int tmp = a;
+		a = b;
+		b = tmp;
 	}
 };
 
