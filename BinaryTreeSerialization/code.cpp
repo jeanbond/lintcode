@@ -1,5 +1,7 @@
 using namespace std;
+
 #include<string>
+#include<queue>
 
 class TreeNode {
 public:
@@ -79,9 +81,51 @@ public:
 
 };
 
+class Solution2
+{
+	/* use BFS to solve */
+private :
+	queue<int> que;
+
+public:
+	unsigned int serializtation(string &src) {
+		if (src.size() <= 0) {
+			return -1;
+		}
+		vector<string> nodelist;
+		parseString(src, nodelist);
+		return 0;
+	}
+
+private:
+	/* parse all information into vector without determin char:',' */
+	unsigned int parseString(string &input, vector<string> &output) {
+		if (input.size() <= 0) { return 0; }
+		int pos = 0, level = 1;
+
+		while (pos < input.size() && input[pos] != '\0') {			
+			unsigned int elemCnt = 0;
+			for (int i = 0; i < level && input[pos] != '\0'; i++) {
+				string stmp="";
+				while (input[pos] != ',' && input[pos] != '\0') {
+					stmp += input[pos];
+					pos++;
+				}
+				output.push_back(stmp);
+				if (stmp.compare(string("#"))) { elemCnt++; }
+				pos++;
+			}
+			level = 2 * elemCnt;
+		}
+		return 0;
+	}
+};
+
 int main() {
-	Solution s = Solution();
-	string sin = "1,#,2";
-	TreeNode *t = s.deserialize(sin);	
+	//Solution s = Solution();
+	string sin = "12,#,32,34,#,#,45,#,#";
+	//TreeNode *t = s.deserialize(sin);	
+	Solution2 s2 = Solution2();
+	s2.serializtation(sin);
 	return 0;
 }
