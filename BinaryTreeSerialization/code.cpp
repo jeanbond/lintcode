@@ -56,17 +56,20 @@ public:
 	}
 
 	TreeNode* deTree(string &data, int &pos) {
+
+		if (data[pos] == ',') { pos++; }
+		if (data[pos] == '\0') { return NULL; }
+
 		if (data[pos] == '#') {
-			pos ++;
+			pos++;
 			return NULL;
-		}
+		}		
 
 		int nownum = 0;
-		while (data[pos] != ',') {
-			nownum = (nownum * 10) + (nownum - '0');
+		while (data[pos] != ',' && data[pos]!= '\0') {
+			nownum = (nownum * 10 ) + (data[pos] - '0');
 			pos++;
 		}
-		pos++;
 
 		TreeNode *node = new TreeNode(nownum);
 		node->left = deTree(data, pos);
