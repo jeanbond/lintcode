@@ -1,9 +1,5 @@
 using namespace std;
-
 #include<string>
-#include<sstream>
-#include<vector>
-
 
 class TreeNode {
 public:
@@ -27,19 +23,20 @@ public:
 	*/
 	string serialize(TreeNode * root) {
 		// write your code here
-		ostringstream out;
-		serials(root, out);
-		return out.str();
+		string s = "";
+		serials(root, s);
+		return s;
 	}
 private:
-	void serials(TreeNode *node, ostream &out) {
+	void serials(TreeNode *node, string &str) {
 		if (node) {
-			out << node->val << ",";
-			serials(node->left, out);
-			serials(node->right, out);
+			str += (to_string(node->val) + ",");
+			serials(node->left, str);
+			serials(node->right, str);
 		}
 		else {
-			out << "#";
+			str += "#";
+			return;
 		}
 		return;
 	}
@@ -54,18 +51,27 @@ public:
 	* "serialize" method.
 	*/
 	TreeNode * deserialize(string &data) {
-		return NULL;
+		int pos = 0;
+		return deTree(data, pos);
 	}
-private:
-	TreeNode * deserials(istringstream &in) {
+
+	TreeNode* deTree(string &data, int &pos) {
+		if (data[pos] == '#') {
+			pos ++;
 			return NULL;
-		
-	}
-	int split(string &input, vector<string> &out, char c) {
-		if (!input.length()) { return -1; }
-		const char *cin = input.c_str();
-	
-		return 0;
+		}
+
+		int nownum = 0;
+		while (data[pos] != ',') {
+			nownum = (nownum * 10) + (nownum - '0');
+			pos++;
+		}
+		pos++;
+
+		TreeNode *node = new TreeNode(nownum);
+		node->left = deTree(data, pos);
+		node->right = deTree(data, pos);
+		return node;
 	}
 
 };
@@ -73,6 +79,6 @@ private:
 int main() {
 	Solution s = Solution();
 	string sin = "1,#,2";
-	s.deserialize(sin);
+	TreeNode *t = s.deserialize(sin);	
 	return 0;
 }
