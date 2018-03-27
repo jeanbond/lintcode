@@ -1,13 +1,15 @@
 using namespace std;
 
 #include<string>
-
+#include<sstream>
+#include<vector>
 
 
 class TreeNode {
 public:
      int val;
      TreeNode *left, *right;
+
      TreeNode(int val) {
          this->val = val;
          this->left = this->right = NULL;
@@ -25,7 +27,24 @@ public:
 	*/
 	string serialize(TreeNode * root) {
 		// write your code here
+		ostringstream out;
+		serials(root, out);
+		return out.str();
 	}
+private:
+	void serials(TreeNode *node, ostream &out) {
+		if (node) {
+			out << node->val << ",";
+			serials(node->left, out);
+			serials(node->right, out);
+		}
+		else {
+			out << "#";
+		}
+		return;
+	}
+
+public:
 
 	/**
 	* This method will be invoked second, the argument data is what exactly
@@ -35,10 +54,25 @@ public:
 	* "serialize" method.
 	*/
 	TreeNode * deserialize(string &data) {
-		// write your code here
+		return NULL;
 	}
+private:
+	TreeNode * deserials(istringstream &in) {
+			return NULL;
+		
+	}
+	int split(string &input, vector<string> &out, char c) {
+		if (!input.length()) { return -1; }
+		const char *cin = input.c_str();
+	
+		return 0;
+	}
+
 };
 
 int main() {
+	Solution s = Solution();
+	string sin = "1,#,2";
+	s.deserialize(sin);
 	return 0;
 }
