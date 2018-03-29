@@ -34,8 +34,8 @@ public:
 	*/
 	int pop() {
 		// write your code here
-		dataStack.pop();
-		int tmp = minStack.top();
+		int tmp = dataStack.top();
+		dataStack.pop();		
 		minStack.pop();
 		return tmp;
 	}
@@ -50,5 +50,24 @@ public:
 };
 
 int main() {
+	MinStack m = MinStack();
+	m.push(-1);
+	m.push(-2);
+	m.min();
+	m.pop();
+	m.push(-3);
+	m.push(3);
+	m.push(2);
+	m.pop();
+	m.pop();
+	m.pop();
+	m.pop();
+	m.push(400);
+	m.push(3);
+	m.push(200);
+	m.push(1);
+	m.min();
+	m.pop();
+	m.min();
 	return 0;
 }

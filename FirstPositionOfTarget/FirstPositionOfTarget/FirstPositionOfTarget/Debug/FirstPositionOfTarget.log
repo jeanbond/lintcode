@@ -1,0 +1,3 @@
+﻿  erfen.cpp
+e:\lintcode\firstpositionoftarget\erfen.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+  FirstPositionOfTarget.vcxproj -> E:\lintcode\FirstPositionOfTarget\FirstPositionOfTarget\Debug\FirstPositionOfTarget.exe
