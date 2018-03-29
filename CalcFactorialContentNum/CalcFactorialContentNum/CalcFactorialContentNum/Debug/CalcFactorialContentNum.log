@@ -1,4 +1,5 @@
 ﻿  calc.c
-e:\lintcode\calcfactorialcontentnum\calc.c(5): warning C4013: “calcsss”未定义；假设外部返回 int
-e:\lintcode\calcfactorialcontentnum\calc.c(10): warning C4142: "calcsss": 类型的良性重定义
-  CalcFactorialContentNum.vcxproj -> E:\lintcode\CalcFactorialContentNum\CalcFactorialContentNum\Debug\CalcFactorialContentNum.exe
+f:\code\lintcode\calcfactorialcontentnum\calc.c(5): warning C4013: “calcsss”未定义；假设外部返回 int
+f:\code\lintcode\calcfactorialcontentnum\calc.c(5): warning C4477: “printf”: 格式字符串“%f”需要类型“double”的参数，但可变参数 1 拥有了类型“int”
+f:\code\lintcode\calcfactorialcontentnum\calc.c(10): warning C4142: "calcsss": 类型的良性重定义
+  CalcFactorialContentNum.vcxproj -> F:\code\lintcode\CalcFactorialContentNum\CalcFactorialContentNum\Debug\CalcFactorialContentNum.exe

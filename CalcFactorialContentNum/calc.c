@@ -2,7 +2,7 @@
 
 int main()
 {
-	printf("%d \n", calcsss(120));
+	printf("%f \n", calcsss(120));
 	return 0;
 }
 
