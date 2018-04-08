@@ -1,0 +1,3 @@
+﻿  combination.cpp
+f:\code\lintcode\combination\combination.cpp(28): warning C4018: “<”: 有符号/无符号不匹配
+  Combination.vcxproj -> F:\code\lintcode\Combination\Combination\Debug\Combination.exe

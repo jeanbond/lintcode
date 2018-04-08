@@ -1,0 +1,4 @@
+﻿  permutations.cpp
+f:\code\lintcode\completepermutation\permutations.cpp(25): warning C4018: “<”: 有符号/无符号不匹配
+f:\code\lintcode\completepermutation\permutations.cpp(35): warning C4018: “<”: 有符号/无符号不匹配
+  CompletePermutation.vcxproj -> F:\code\lintcode\CompletePermutation\CompletePermutation\Debug\CompletePermutation.exe
