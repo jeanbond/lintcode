@@ -1,2 +1,3 @@
 ﻿  permutatio_ii.cpp
-  Permutation_ii.vcxproj -> E:\gitcode\gitee_lintcode\Permutation-ii\Permutation_ii\Debug\Permutation_ii.exe
+f:\code\lintcode\permutation-ii\permutatio_ii.cpp(38): warning C4018: “<”: 有符号/无符号不匹配
+  Permutation_ii.vcxproj -> F:\code\lintcode\Permutation-ii\Permutation_ii\Debug\Permutation_ii.exe

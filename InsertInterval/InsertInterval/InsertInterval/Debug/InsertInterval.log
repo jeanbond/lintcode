@@ -1,0 +1,5 @@
+﻿  insert-interval.cpp
+f:\code\lintcode\insertinterval\insert-interval.cpp(56): warning C4018: “<”: 有符号/无符号不匹配
+f:\code\lintcode\insertinterval\insert-interval.cpp(58): warning C4018: “<”: 有符号/无符号不匹配
+f:\code\lintcode\insertinterval\insert-interval.cpp(76): warning C4018: “<”: 有符号/无符号不匹配
+  InsertInterval.vcxproj -> F:\code\lintcode\InsertInterval\InsertInterval\Debug\InsertInterval.exe

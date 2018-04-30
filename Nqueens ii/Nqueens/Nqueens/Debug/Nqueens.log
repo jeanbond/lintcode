@@ -1,0 +1,5 @@
+﻿  nqueues.cpp
+e:\gitcode\gitee_lintcode\nqueens ii\nqueues.cpp(21): warning C4018: “<”: 有符号/无符号不匹配
+e:\gitcode\gitee_lintcode\nqueens ii\nqueues.cpp(31): warning C4018: “<”: 有符号/无符号不匹配
+e:\gitcode\gitee_lintcode\nqueens ii\nqueues.cpp(32): warning C4018: “<”: 有符号/无符号不匹配
+  Nqueens.vcxproj -> E:\gitcode\gitee_lintcode\Nqueens ii\Nqueens\Debug\Nqueens.exe

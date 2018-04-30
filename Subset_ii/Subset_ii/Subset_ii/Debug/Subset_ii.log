@@ -1,0 +1,3 @@
+﻿  subset.cpp
+f:\code\lintcode\subset_ii\subset.cpp(17): warning C4018: “<”: 有符号/无符号不匹配
+  Subset_ii.vcxproj -> F:\code\lintcode\Subset_ii\Subset_ii\Debug\Subset_ii.exe

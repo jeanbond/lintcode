@@ -1,0 +1,6 @@
+﻿  search-a-2d-matrix.cpp
+f:\code\lintcode\search2dmatrix\search-a-2d-matrix.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+f:\code\lintcode\search2dmatrix\search-a-2d-matrix.cpp(23): warning C4018: “<”: 有符号/无符号不匹配
+f:\code\lintcode\search2dmatrix\search-a-2d-matrix.cpp(26): warning C4018: “>=”: 有符号/无符号不匹配
+f:\code\lintcode\search2dmatrix\search-a-2d-matrix.cpp(27): warning C4715: “Solution::searchMatrix”: 不是所有的控件路径都返回值
+  Search2dMatrix.vcxproj -> F:\code\lintcode\Search2dMatrix\Search2dMatrix\Debug\Search2dMatrix.exe

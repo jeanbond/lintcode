@@ -1,0 +1,3 @@
+﻿  minimum-window-substring.cpp
+e:\gitcode\gitee_lintcode\minimumwindowsubstring\minimum-window-substring.cpp(20): warning C4018: “<”: 有符号/无符号不匹配
+  MinimumWindowSubstring.vcxproj -> E:\gitcode\gitee_lintcode\MinimumWindowSubstring\MinimumWindowSubstring\Debug\MinimumWindowSubstring.exe

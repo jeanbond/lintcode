@@ -50,6 +50,9 @@ U32  QSort<T>::partition(T *src, U32 start, U32 end) {
 		   我们采用的第一个校准元素，该元素可以是任意一个，但必须指定。
 		3、swap函数必须是地址传递，不能值传递，cpp的&引用实际上也就是地址传递；
 	*/
+	/* 此处有个严重bug：
+		当开始和结尾位置的元素相同的时候会陷入死循环，使用下面代码解决；*/
+	if (src[start] == src[end] && src[start] == tmp) { end--; }
 	while (start < end) {
 		while (start < end && src[end] >= tmp && end > 0) end--;
 		swap(src[start], src[end]);
@@ -80,7 +83,7 @@ U32 QSort<T>::showList(T *src, U32 len) {
 }
 
 U32 main() {
-	U32 src[] = { 2,56,6,9,55,12,85,48,99,5,65,4654,121,58458,21,31,546,46,546,546,5465,4,4,5 };
+	U32 src[] = { 9,9,9,8,9,8,7,9,8,8,8,9,8,9,8,8,6,9 };
 	QSort<U32> q = QSort<U32>();
 	U32 len = (sizeof(src) / sizeof(src[0]));
 	q.quickSort(src, 0, len - 1);
