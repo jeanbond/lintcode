@@ -26,7 +26,7 @@ class Solution:
         ''' 
         Caution:
             U can only push data into smaller heap, then translate into bigger heap,
-            or it will cause some mistakes.
+            or it will cause some mistakes(some big data will be pushed into smaller heap.
         '''
         h.heappush(self.smallHeap, num)
         h.heappush(self.bigHeap, -self.smallHeap[0])
